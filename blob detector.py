@@ -2,7 +2,7 @@ import cv2
 import numpy as np 
   
 # Load image 
-image = cv2.imread('test pictures\Counter Window - Fish 4, Level 20, dpf5, 190-D16, cut 5_5_23, stained 5_18_23_01_11.tif', 0) 
+image = cv2.imread('test pictures\picture 1.tif', 0) 
   
 # Set our filtering parameters 
 # Initialize parameter setting using cv2.SimpleBlobDetector 
@@ -10,19 +10,19 @@ params = cv2.SimpleBlobDetector_Params()
   
 # Set Area filtering parameters 
 params.filterByArea = True
-params.minArea = 100
-params.maxArea = 500
+params.minArea = 5
+params.maxArea = 100
   
 # Set Circularity filtering parameters 
-params.filterByCircularity = True 
+params.filterByCircularity = False 
 params.minCircularity = 0.9
   
 # Set Convexity filtering parameters 
-params.filterByConvexity = True
+params.filterByConvexity = False
 params.minConvexity = 0.2
       
 # Set inertia filtering parameters 
-params.filterByInertia = True
+params.filterByInertia = False
 params.minInertiaRatio = 0.01
   
 # Create a detector with the parameters 
