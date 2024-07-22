@@ -11,7 +11,7 @@ params = cv2.SimpleBlobDetector_Params()
 # Set Area filtering parameters 
 params.filterByArea = True
 params.minArea = 5
-params.maxArea = 100
+params.maxArea = 15
   
 # Set Circularity filtering parameters 
 params.filterByCircularity = False 
